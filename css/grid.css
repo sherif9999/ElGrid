@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+}
+
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+    "header"
+    "main"
+    "sidebar"
+    "twin1"
+    "twin2"
+    "footer"
+    ;
+}
+
+.header{
+    background-color: yellow;
+    grid-area: header;
+}
+.main{
+    background-color: aqua;
+    grid-area: main;
+}
+.sidebar{
+    background-color: brown;
+    grid-area: sidebar;
+}
+.twin1{
+    background-color: gray;
+    grid-area: twin1;
+}
+.twin2{
+    background-color: pink;
+    grid-area: twin2;
+}
+.footer{
+    background-color: bisque;
+    grid-area: footer;
+}
+
+@media (min-width: 768px){
+    .container{
+        grid-template-areas: 
+        "header header header header header header header header header header"
+        ". . main main main main sidebar sidebar . ."
+        ". . twin1 twin1 twin1 twin1 twin2 twin2 . ."
+        "footer footer footer footer footer footer footer footer footer footer"
+        ;
+    }
+}
